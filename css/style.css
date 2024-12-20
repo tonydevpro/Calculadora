@@ -155,6 +155,9 @@ input{
     background-color: #333;
     color: #fff;
 }
+.theme2 .display{
+    color: #000;
+}
 .theme2 .tecladoGeral button {
     background-color: #555;
     color: #fff;
