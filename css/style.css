@@ -1,0 +1,182 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(249, 250, 252);
+}
+.calculadora{
+    background-color: rgba(0, 0, 0, 0);
+    width: 450px;
+    height: 60%;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.menuCheck{
+    display: flex;
+    text-align-last: center;
+    align-items: center;
+}
+.menuCheck p{
+    margin-right: 10px;
+    font-size: smaller;
+}
+.check{
+    display: flex;
+    
+}
+
+/*      experimental                                */
+
+input[type="radio"] {
+    display: none;
+    z-index: 1;
+}
+.checkNumber {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    position: relative;
+}
+.checkNumber::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: lightgray;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.3s ease; /* Animação suave */
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-top: 5px;
+}
+input[type="radio"]:checked + label .checkNumber::after {
+    background-color: cornflowerblue;
+    transform: scale(1.3); /* Aumenta levemente a bolinha */
+    box-shadow: 0 0 6px rgba(0, 0, 255, 0.5);
+}
+/* Numeração do tema */
+.checkNumber h6 {
+    font-size: small;
+    margin-bottom: 5px;
+    color: gray;
+}
+
+
+
+
+
+
+
+
+
+/*                                                                  */
+input{
+    border: none;
+
+}
+.display{
+    height: 20%;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 5%;
+    font-size: xx-large;
+    text-align: end;
+    align-content: center;
+    padding-right: 1%;
+}
+.teclado{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+.tecladoGeral{
+    background-color: rgba(240, 240, 240, 0.5);
+    border-radius: 10px;
+    padding: 4%;
+}    
+.tecladoGeral button{
+    cursor: pointer;
+    font-size: x-large;
+    width: 70%;
+    margin: 5%;
+    height: 40px;
+    box-shadow: 0px 5px 2px rgb(102, 94, 94);
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+}
+.tecladoReset{
+    display: flex;
+    margin: auto;
+    max-width: 100%;
+    justify-content: center;
+}
+.tecladoReset button{
+    width: 45%;
+    gap: 5%;
+}
+
+/*       temas              */
+
+/* Tema padrão */
+.theme1 {
+    background-color: #f0f8ff;
+    color: #000;
+}
+.theme1 .tecladoGeral button {
+    background-color: #fff;
+    color: #000;
+}
+.theme1 #deletar,
+.theme1 #reset{
+    background-color: #0d5ea5;
+    color: white;}
+.theme1 #igual{
+    background-color: #0d5ea5;
+}
+
+/* Tema escuro */
+.theme2 {
+    background-color: #333;
+    color: #fff;
+}
+.theme2 .tecladoGeral button {
+    background-color: #555;
+    color: #fff;
+}
+.theme2 .tecladoGeral #igual{
+    background-color: white;
+    color: #000;
+}
+
+/* Tema vibrante */
+.theme3 {
+    background-color: #8560b6;
+    color: #000;
+}
+.theme3 .tecladoGeral button {
+    background-color: #c38de2;
+    color: #fff;
+}
+.theme3 .tecladoGeral #reset,
+.theme3 .tecladoGeral #deletar{
+    background-color: #8560b6;
+}
+.theme3 .tecladoGeral #igual{
+    background-color: #50208f;
+}
